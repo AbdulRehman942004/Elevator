@@ -1,10 +1,6 @@
 import heapq
-from enum import Enum
 
-class Direction(Enum):
-    UP = 1
-    DOWN = -1
-    IDLE =0
+from .direction import Direction
 
 class Elevator:
     FLOOR_TO_NUMBER = {
@@ -34,7 +30,7 @@ class Elevator:
         print(f"Up queue set: {[self.NUMBER_TO_FLOOR[floor] for floor in self.up_queue_set]}")
         print(f"Down queue: {[self.NUMBER_TO_FLOOR[-floor] for floor in self.down_queue]}")
         print(f"Down queue set: {[self.NUMBER_TO_FLOOR[-floor] for floor in self.down_queue_set]}")
-    
+
     def request_elevator(self, floor):
         requested_floor_number = self.FLOOR_TO_NUMBER[floor]
 
@@ -43,7 +39,7 @@ class Elevator:
                 self.up_queue_set.add(requested_floor_number)
                 heapq.heappush(self.up_queue, requested_floor_number)
                 self.direction = Direction.UP
-                
+
         elif(requested_floor_number<self.current_floor):
             if(requested_floor_number not in self.down_queue_set):
                 self.down_queue_set.add(requested_floor_number)
@@ -54,10 +50,3 @@ class Elevator:
         else:
             print("Elevator is already on the requested floor.")
             self.direction = Direction.IDLE
-
-Elevator=Elevator()
-Elevator.display_status()
-Elevator.request_elevator("3B")
-
-Elevator.request_elevator("2")
-Elevator.display_status()
