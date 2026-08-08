@@ -1,0 +1,49 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 main.py)",
+      "Bash(python3 \"/tmp/claude-1000/-home-akif-aziz-Public-practice-projects-Elevator/7d5c2e4e-c67c-40ba-9f43-0d2eef454bf9/scratchpad/edges.py\")",
+      "Bash(python3 \"/tmp/claude-1000/-home-akif-aziz-Public-practice-projects-Elevator/7d5c2e4e-c67c-40ba-9f43-0d2eef454bf9/scratchpad/edges2.py\")",
+      "Bash(python3 -c ' *)",
+      "Bash(ls -a \"/home/akif-aziz/.claude/projects/-home-akif-aziz-Public-practice-projects-Elevator/memory/\" 2>&1; echo \"---\"; cat \"/home/akif-aziz/.claude/projects/-home-akif-aziz-Public-practice-projects-Elevator/memory/MEMORY.md\" 2>&1)",
+      "Read(//home/akif-aziz/.claude/projects/-home-akif-aziz-Public-practice-projects-Elevator/memory/**)",
+      "Bash(rm MEMORY.md)",
+      "Bash(printf -- '- [Modelling a real office lift]\\(modelling-a-real-office-lift.md\\) — the project copies a specific real building'\"'\"'s elevator; specs arrive as numbered use cases\\\\n')",
+      "Bash(./venv/bin/python -V)",
+      "Bash(./venv/bin/pip list *)",
+      "Bash(npm install *)",
+      "Bash(./venv/bin/python main.py)",
+      "Bash(./venv/bin/uvicorn api.app:app --port 8000 --log-level warning)",
+      "Bash(curl -sf localhost:8000/api/state)",
+      "Bash(break)",
+      "Bash(curl -s localhost:8000/api/state)",
+      "Bash(./venv/bin/python -m json.tool)",
+      "Bash(./venv/bin/python \"/tmp/claude-1000/-home-akif-aziz-Public-practice-projects-Elevator/7d5c2e4e-c67c-40ba-9f43-0d2eef454bf9/scratchpad/api_check.py\")",
+      "Bash(grep -n \"^#\\\\+ \\\\|^| \\\\`\")",
+      "Bash(npx tsc *)",
+      "Bash(echo \"=== TSC EXIT: $? ===\")",
+      "Bash(npm run *)",
+      "Bash(npx eslint *)",
+      "Bash(node -e 'let d=\"\";process.stdin.on\\(\"data\",c=>d+=c\\).on\\(\"end\",\\(\\)=>{const r=JSON.parse\\(d\\).filter\\(f=>f.messages.length\\);const by={};for\\(const f of r\\){const k=f.filePath.includes\\(\"/elevator/\"\\)?\"stranded client/elevator/\":\"real source\";by[k]=\\(by[k]||0\\)+f.messages.length}console.log\\(by\\);console.log\\(\"\\\\nreal source files with problems:\"\\);r.filter\\(f=>!f.filePath.includes\\(\"/elevator/\"\\)\\).forEach\\(f=>console.log\\(\" \",f.filePath.split\\(\"/client/\"\\)[1],f.messages.length\\)\\)}\\)')",
+      "Bash(echo \"=== EXIT $? ===\")",
+      "Bash(curl -sf localhost:3000 -o /dev/null)",
+      "Bash(curl -s -i -X OPTIONS localhost:8000/api/hall -H \"Origin: http://localhost:3000\" -H \"Access-Control-Request-Method: POST\" -H \"Access-Control-Request-Headers: content-type\")",
+      "Bash(curl -s -i -X POST localhost:8000/api/hall -H \"Origin: http://localhost:3000\" -H \"Content-Type: application/json\" -d '{\"floor\":\"3\",\"direction\":\"UP\"}')",
+      "Bash(curl -s localhost:3000)",
+      "Bash(curl -s -X POST localhost:8000/api/reset)",
+      "Bash(./venv/bin/python -c \"import json,sys; s=json.load\\(sys.stdin\\); print\\('reset ->', s['floor'], s['direction'], s['doors'], '| pending:', s['car_calls']+s['up_calls']+s['down_calls'] or 'none'\\)\")",
+      "Bash(curl -s -o /dev/null -w \"GET /docs -> %{http_code}\\\\n\" localhost:8000/docs)",
+      "Bash(lsof -i:8000)",
+      "Bash(curl -s -i localhost:8000/api/state)",
+      "Read(//home/akif-aziz/Public/Head office scrappers/scraping-hub/server/**)",
+      "Bash(curl -s localhost:8000/openapi.json)",
+      "Bash(./venv/bin/python -c \"import json,sys;s=json.load\\(sys.stdin\\);print\\('tick',s['tick'],'floor',s['floor'],s['direction']\\)\")",
+      "Bash(./venv/bin/python /tmp/claude-1000/-home-akif-aziz-Public-practice-projects-Elevator/7d5c2e4e-c67c-40ba-9f43-0d2eef454bf9/scratchpad/live.py)",
+      "Bash(./venv/bin/python demo.py)",
+      "Bash(python3 -c \"import json,sys;s=json.load\\(sys.stdin\\);print\\('lift reset -> floor',s['floor'],s['direction'],'| pending:',\\(s['car_calls']+s['up_calls']+s['down_calls']\\) or 'none'\\)\")"
+    ],
+    "additionalDirectories": [
+      "/home/akif-aziz/.claude/projects/-home-akif-aziz-Public-practice-projects-Elevator"
+    ]
+  }
+}

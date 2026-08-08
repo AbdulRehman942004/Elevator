@@ -1,8 +1,12 @@
-from elevator import Elevator
+"""Server entrypoint.
 
-Elevator=Elevator()
-Elevator.display_status()
-Elevator.request_elevator("3B")
+    uvicorn main:app --reload
 
-Elevator.request_elevator("2")
-Elevator.display_status()
+The application itself lives in `api/app.py`; this module only exposes it under
+the name uvicorn looks for by default. The scenario walk-through that used to
+live here is now `demo.py`, and still runs with `python demo.py`.
+"""
+
+from api.app import app
+
+__all__ = ["app"]
